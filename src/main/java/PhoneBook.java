@@ -2,7 +2,7 @@ import java.util.*;
 
 public class PhoneBook {
 
-    Map<String, String> storage = new TreeMap<>();
+    Map<String, String> storage = new TreeMap<>(Comparator.naturalOrder());
     Map<String, String> storageNext = new HashMap<>();
 
     public int add(String name, String num) {
@@ -28,7 +28,11 @@ public class PhoneBook {
         return storage.get(name);
     }
 
-    public List<String> printAllNames(){
-        return null;
+    public List<String> printAllNames() {
+        List<String> list = new ArrayList<>();
+        for (String mp : storage.keySet()) {
+            list.add(mp);
+        }
+        return list;
     }
 }
