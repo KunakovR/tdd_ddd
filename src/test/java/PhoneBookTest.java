@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class PhoneBookTest {
@@ -14,9 +15,9 @@ public class PhoneBookTest {
     @Test
     public void addTest() {
         PhoneBook phoneBook = new PhoneBook();
-        assertEquals(var6,phoneBook.add(var1, var3));
-        assertEquals(var7,phoneBook.add(var2, var4));
-        assertEquals(var7,phoneBook.add(var1, var5));
+        assertEquals(var6, phoneBook.add(var1, var3));
+        assertEquals(var7, phoneBook.add(var2, var4));
+        assertEquals(var7, phoneBook.add(var1, var5));
     }
 
     @Test
