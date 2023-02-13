@@ -23,4 +23,8 @@ public class PhoneBook {
     public String findByNumber(String num) {
         return storageNext.get(num);
     }
+
+    public String findByName(String name) {
+        return null;
+    }
 }

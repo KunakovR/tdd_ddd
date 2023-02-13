@@ -29,5 +29,12 @@ public class PhoneBookTest {
         assertEquals(var2, phoneBook.findByNumber(var4));
     }
 
-
+    @Test
+    public void findByNameTest() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add(var1, var3);
+        phoneBook.add(var2, var4);
+        phoneBook.add(var1, var5);
+        assertEquals(var3, phoneBook.findByName(var1));
+    }
 }
