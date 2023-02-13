@@ -2,6 +2,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class PhoneBookTest {
 
     String var1 = "Ольга";
@@ -36,5 +38,15 @@ public class PhoneBookTest {
         phoneBook.add(var2, var4);
         phoneBook.add(var1, var5);
         assertEquals(var3, phoneBook.findByName(var1));
+    }
+
+    @Test
+    public void printAllNamesTest() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Андрей", "89033105689");
+        phoneBook.add("Эдуард", "82241237489");
+        phoneBook.add("Ольга", "89554569559");
+        List<String> list = List.of("Андрей", "Ольга", "Эдуард");
+        assertLinesMatch(list, phoneBook.printAllNames());
     }
 }

@@ -27,4 +27,8 @@ public class PhoneBook {
     public String findByName(String name) {
         return storage.get(name);
     }
+
+    public List<String> printAllNames(){
+        return null;
+    }
 }
